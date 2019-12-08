@@ -9,7 +9,7 @@ echo "-> Database schema will be updated if necessary"
 echo "-> Webpack will compile assets"
 
 docker-compose build
-docker-compose run --rm web yarn install # needed to avoid yarn integrity check fail
-docker-compose run --rm -e UPDATE=1 web
+docker-compose run --rm app yarn install # needed to avoid yarn integrity check fail
+docker-compose run --rm -e UPDATE=1 app
 
 echo "Update completed."
