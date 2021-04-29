@@ -12,8 +12,10 @@ fi
 # Array of environment variables that must be present
 env_vars=(
 	"ENVIRONMENT" \
-	"POSTGRES_USER" \
-	"POSTGRES_PASSWORD" \
+	"ASTUTO_PG_USER" \
+	"ASTUTO_PG_PASS" \
+	"ASTUTO_PG_HOST" \
+	"ASTUTO_PG_DB" \
 	"EMAIL_CONFIRMATION" \
 	"APP_NAME" \
 	"SHOW_LOGO" \

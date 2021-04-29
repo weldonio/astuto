@@ -1,13 +1,9 @@
 version: '3'
 services:
-  db:
-    image: postgres
-    environment:
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
-    volumes:
-      - ./tmp/db:/var/lib/postgresql/data
   web:
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     build:
       context: .
       dockerfile: ./docker/app/Dockerfile
@@ -15,8 +11,10 @@ services:
       - UPDATE=0
       - ENVIRONMENT
       - SECRET_KEY_BASE
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
+      - ASTUTO_PG_USER
+      - ASTUTO_PG_PASS
+      - ASTUTO_PG_HOST
+      - ASTUTO_PG_DB
       - EMAIL_CONFIRMATION
       - APP_NAME
       - SHOW_LOGO
@@ -25,5 +23,3 @@ services:
       - .:/astuto
     ports:
       - "3000:3000"
-    depends_on:
-      - db
