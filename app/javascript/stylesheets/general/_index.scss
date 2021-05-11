@@ -3,9 +3,28 @@
   could not be grouped in a file of their own
 */
 
-.container {
-  max-width: 920px;
+body {
+  font-family: 'Inter', sans-serif;
 }
+
+h2 {
+  font-weight: bold;
+}
+
+.introduction {
+  font-weight: 300;
+  font-size: 14px;
+  
+}
+
+.introduction a {
+  color: $weldon-blue;
+  font-weight: 700;
+}
+
+/* .container {
+  max-width: 920px;
+} */
 
 .turbolinks-progress-bar {
   background-color: $astuto-black;
@@ -35,6 +54,7 @@
   background-color: #343a40;
   border-color: #343a40;
 }
+
 
 @media (prefers-color-scheme: dark) {
   html, body {

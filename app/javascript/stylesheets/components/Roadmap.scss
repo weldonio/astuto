@@ -25,12 +25,13 @@
 
     .columnTitle {
       color: white;
+      font-size: 18px;
     }
   }
 
   .scrollContainer {
     overflow-y: auto;
-    max-height: 350px;
+    max-height: 500px;
   }
 
   .postLink {
